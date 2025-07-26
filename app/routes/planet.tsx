@@ -1,5 +1,5 @@
 import type { Route } from "./+types/planet";
-import Planet from "../components/planet";
+import Planet from "../components/Planet";
 
 export async function clientLoader({ params }: Route.ClientLoaderArgs) {
   const res = await fetch(`https://swapi.info/api/planets/${params.id}`);
