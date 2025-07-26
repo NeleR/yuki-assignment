@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 
-type PlanetsProps = { planets: any[] };
+import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
+
+type PlanetsProps = { planets: PlanetType[] };
 
 export default function Planets({ planets }: PlanetsProps) {
   return (
