@@ -7,8 +7,10 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "prettier": "prettier --write \"app/**/*.(js|ts|jsx|tsx)\"",
-    "lint": "eslint ./app"
+    "prettier": "prettier --write '**/*.(js|ts|jsx|tsx)'",
+    "lint": "eslint ./app",
+    "cypress": "cypress open --config baseUrl='http://localhost:5173'",
+    "test:cypress": "cypress run --config baseUrl='http://localhost:5173'"
   },
   "dependencies": {
     "@react-router/node": "^7.7.1",
@@ -29,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "cypress": "^14.5.3",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
