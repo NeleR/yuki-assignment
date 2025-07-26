@@ -1,5 +1,5 @@
-type PlanetProps = { id: string };
+type PlanetProps = { id: string; planet: { name: string } };
 
-export default function Planet({ id }: PlanetProps) {
-  return `I am planet ${id}`;
+export default function Planet({ id, planet }: PlanetProps) {
+  return `I am planet ${planet.name} (${id})`;
 }
