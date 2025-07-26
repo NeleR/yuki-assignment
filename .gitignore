@@ -416,3 +416,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Create create-react-router
+.DS_Store
+.next
+
+# React Router
+/.react-router/
+/build/
