@@ -1,18 +1,35 @@
-# Welcome to React Router!
+# Assignment for Yuki
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## Assignment
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+In this test you will have to consume from [https://swapi.dev](https://swapi.dev), a free API related to a beloved entertainment franchise, in order to show two views:
 
-## Features
+- A planets view where you list the planet name and the names of the Star Wars
+films where they appear.
+- Single planet view where you show all the information of a given planet.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+As you can see, the functionality itself is quite simple.
+
+### What are we going to evaluate?
+- Mastery of HTML, CSS and JavaScript or TypeScript: solid knowledge of the fundamentals and the latest trends in these languages (we use TypeScript).
+- Frameworks and libraries: show your experience with popular frameworks such as React, Angular or Vue.js (We use Vue), and relevant libraries.
+- Design patterns: apply common design patterns to create robust and scalable interfaces.
+- User experience (UX): show you can create an intuitive and user-friendly interface.
+- Responsive Design: build interfaces that adapt to different devices and screen sizes.
+- Testing: show knowledge of tools and techniques to perform unit and integration tests.
+
+### What can you use?
+- JS or TS, but it’s good to know we use TS.
+- Any framework you want, we love to use Vue.js.
+- Any markup styling framework, we use Sass.
+- Any testing suite.
+
+### What should be the outcome?
+You need to create a private repository on Github/Gitlab and share it with the user that will be provided in the communication when we send you this document. In this repository you should have:
+- The project.
+- A README with instructions on how to execute the project and the tests - If you feel like it, you may also include any other explanation, such as why you’ve made your decisions.
+
+Please, feel completely free to ask any questions you may have to your HR contact, who will send them back to IT.
 
 ## Getting Started
 
@@ -77,10 +94,6 @@ Make sure to deploy the output of `npm run build`
 │   ├── client/    # Static assets
 │   └── server/    # Server-side code
 ```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
