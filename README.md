@@ -98,3 +98,4 @@ Make sure to deploy the output of `npm run build`
 ---
 
 Built with ❤️ using React Router.
+(Leia icons created by pocike - Flaticon)[https://www.flaticon.com/free-icons/leia]
