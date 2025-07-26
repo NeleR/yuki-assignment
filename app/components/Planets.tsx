@@ -12,7 +12,7 @@ export default function Planets({ planets }: PlanetsProps) {
       <ol>
         {planets.map((planet, index) => (
           <li key={index}>
-            <Link to={`/${index}`}>{planet.name}</Link>
+            <Link to={`/${index + 1}`}>{planet.name}</Link>
           </li>
         ))}
       </ol>
