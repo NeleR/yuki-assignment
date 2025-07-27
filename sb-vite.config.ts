@@ -1,5 +1,7 @@
+// storybook needs a vite config without React Router
+// https://github.com/storybookjs/storybook/issues/25154#issuecomment-1852976172
+
 /// <reference types="vitest/config" />
-import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -12,14 +14,8 @@ const dirname =
     : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
-// React Router doesn't work in Vitest's environment
-// https://akoskm.com/react-router-vitest-example/#heading-disable-react-router
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    !process.env.VITEST && reactRouter(),
-    tsconfigPaths(),
-  ],
+  plugins: [tailwindcss(), tsconfigPaths()],
   test: {
     projects: [
       {
