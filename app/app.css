@@ -11,3 +11,7 @@ body {
     color-scheme: dark;
   }
 }
+
+.star-wars-font {
+  font-family: "Star Wars", sans-serif;                                              
+}

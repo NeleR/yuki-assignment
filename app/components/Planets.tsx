@@ -1,13 +1,14 @@
 import { Link } from "react-router";
 
 import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
+import PageTitle from "./base/PageTitle";
 
 type PlanetsProps = { planets: PlanetType[] };
 
 export default function Planets({ planets }: PlanetsProps) {
   return (
     <>
-      <h1>Star Wars Planets</h1>
+      <PageTitle>Star Wars Planets</PageTitle>
       <p>There are {planets.length} planets available</p>
       <ol>
         {planets.map((planet, index) => (

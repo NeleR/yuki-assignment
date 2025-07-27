@@ -1,6 +1,8 @@
 import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
+import PageTitle from "./base/PageTitle";
+
 type PlanetPropTypes = { id: string; planet: PlanetType };
 
-export default function Planet({ id, planet }: PlanetPropTypes) {
-  return `I am planet ${planet.name} (${id})`;
+export default function Planet({ planet }: PlanetPropTypes) {
+  return <PageTitle>{planet.name}</PageTitle>;
 }

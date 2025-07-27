@@ -32,6 +32,10 @@ export const links: Route.LinksFunction = () => [
     rel: "manifest",
     href: "/site.webmanifest",
   },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.cdnfonts.com/css/star-wars",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
