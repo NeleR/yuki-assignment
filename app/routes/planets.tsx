@@ -6,7 +6,7 @@ import { planetsQuery } from "../queries/planets";
 import Planets from "../components/Planets";
 
 export async function clientLoader() {
-  const planets = await queryClient.ensureQueryData(planetsQuery());
+  const planets = queryClient.ensureQueryData(planetsQuery());
   return { planets };
 }
 
