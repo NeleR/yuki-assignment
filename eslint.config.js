@@ -4,6 +4,7 @@ import storybook from "eslint-plugin-storybook";
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import pluginQuery from "eslint-plugin-query";
 import pluginReact from "eslint-plugin-react";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
@@ -18,6 +19,7 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   storybook.configs.flat.recommended,
+  pluginQuery.configs.flat.recommended,
   tseslint.configs.recommended,
   {
     ...pluginReact.configs.flat.recommended,
