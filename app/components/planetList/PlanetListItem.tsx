@@ -21,7 +21,7 @@ export default function PlanetListItem({ planet }: PlanetListItemPropTypes) {
               : "Featured in the films"}
           </p>
           <ol className="text-sm inline-flex flex-wrap gap-1">
-            {planet.films.map((filmUrl,index) => (
+            {planet.films.map((filmUrl, index) => (
               <li key={index} className="inline">
                 <Pill>
                   <UrlItem url={filmUrl} displayResolvedItem={displayFilm} />
