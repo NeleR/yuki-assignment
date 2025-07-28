@@ -2,6 +2,7 @@ import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
 import { pick, capitalize, map } from "lodash";
 
 import PageTitle from "./base/PageTitle";
+import { Link } from "react-router";
 
 type PlanetPropTypes = { id: string; planet: PlanetType };
 
@@ -22,7 +23,7 @@ export default function Planet({ planet }: PlanetPropTypes) {
     <>
       <PageTitle>{planet.name}</PageTitle>
       <table className="mx-auto table-fixed">
-        <caption className="italic text-sm pb-2">Planet details</caption>
+        <caption className="italic text-sm mb-2">Planet details</caption>
         <tbody>
           {map(descriptionItems, (value: string, key: string) => (
             <tr key={key}>
@@ -34,6 +35,11 @@ export default function Planet({ planet }: PlanetPropTypes) {
           ))}
         </tbody>
       </table>
+      <Link to={"/"}>
+        <div className="italic underline text-sm mt-8 text-center">
+          Explore other planets
+        </div>
+      </Link>
     </>
   );
 }
