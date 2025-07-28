@@ -10,6 +10,8 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+
+  font-family: "Courier New", sans-serif
 }
 
 .star-wars-font {
