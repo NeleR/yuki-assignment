@@ -6,7 +6,9 @@ import { Link } from "react-router";
 
 type PlanetDetailsPagePropTypes = { id: string; planet: PlanetType };
 
-export default function PlanetDetailsPage({ planet }: PlanetDetailsPagePropTypes) {
+export default function PlanetDetailsPage({
+  planet,
+}: PlanetDetailsPagePropTypes) {
   const descriptionItems = pick(planet, [
     "name",
     "rotation_period",
