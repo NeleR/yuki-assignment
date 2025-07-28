@@ -3,14 +3,14 @@ import type { Route } from "./+types/planets";
 
 import { queryClient } from "../root";
 import { planetsQuery } from "../queries/planets";
-import Planets from "../components/Planets";
+import PlanetListPage from "../components/planetList/PlanetListPage";
 
 export async function clientLoader() {
   const planets = queryClient.ensureQueryData(planetsQuery());
   return { planets };
 }
 
-export default function PlanetsRoute({ loaderData }: Route.ComponentProps) {
+export default function PlanetListRoute({ loaderData }: Route.ComponentProps) {
   const { data: planets } = useQuery({
     ...planetsQuery(),
     initialData: loaderData.planets,
@@ -20,7 +20,7 @@ export default function PlanetsRoute({ loaderData }: Route.ComponentProps) {
     <>
       <title>Planet overview</title>
       <meta name="description" content="Overview of all Star Wars planets" />
-      <Planets planets={planets} />
+      <PlanetListPage planets={planets} />
     </>
   );
 }

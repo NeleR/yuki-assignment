@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import type { Route } from "./+types/planet";
 
-import Planet from "../components/Planet";
+import PlanetDetailsPage from "../components/planetDetails/PlanetDetailsPage";
 import { queryClient } from "../root";
 import { planetDetailQuery } from "../queries/planets";
 
@@ -12,7 +12,7 @@ export async function clientLoader({ params }: Route.ClientLoaderArgs) {
   return { planet };
 }
 
-export default function PlanetRoute({
+export default function PlanetDetailsRoute({
   params,
   loaderData,
 }: Route.ComponentProps) {
@@ -25,7 +25,7 @@ export default function PlanetRoute({
     <>
       <title>Planet {params.id}</title>
       <meta name="description" content="Details of a Star Wars planet" />
-      <Planet id={params.id} planet={planet} />
+      <PlanetDetailsPage id={params.id} planet={planet} />
     </>
   );
 }

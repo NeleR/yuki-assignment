@@ -2,12 +2,12 @@ import { Await, Link } from "react-router";
 import { Suspense } from "react";
 
 import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
-import PageTitle from "./base/PageTitle";
-import Card from "./base/Card";
+import PageTitle from "../base/PageTitle";
+import Card from "../base/Card";
 
-type PlanetsProps = { planets: PlanetType[] };
+type PlanetListPageProps = { planets: PlanetType[] };
 
-export default function Planets({ planets }: PlanetsProps) {
+export default function PlanetListPage({ planets }: PlanetListPageProps) {
   return (
     <>
       <PageTitle>Star Wars Planets</PageTitle>
@@ -24,7 +24,7 @@ export default function Planets({ planets }: PlanetsProps) {
   );
 }
 
-function PlanetList({ planets }: PlanetsProps) {
+function PlanetList({ planets }: PlanetListPageProps) {
   return (
     <>
       <p className="italic text-sm mb-2">

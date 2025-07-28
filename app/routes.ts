@@ -7,7 +7,7 @@ import {
 
 export default [
   layout("./layouts/PageLayout.tsx", [
-    index("routes/planets.tsx"),
-    route(":id", "routes/planet.tsx"),
+    index("routes/planetList.tsx"),
+    route(":id", "routes/planetDetails.tsx"),
   ]),
 ] satisfies RouteConfig;

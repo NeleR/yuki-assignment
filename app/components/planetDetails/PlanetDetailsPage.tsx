@@ -1,12 +1,12 @@
 import type PlanetType from "swapi-typescript/dist/models/Planet.d.ts";
 import { pick, capitalize, map } from "lodash";
 
-import PageTitle from "./base/PageTitle";
+import PageTitle from "../base/PageTitle";
 import { Link } from "react-router";
 
-type PlanetPropTypes = { id: string; planet: PlanetType };
+type PlanetDetailsPagePropTypes = { id: string; planet: PlanetType };
 
-export default function Planet({ planet }: PlanetPropTypes) {
+export default function PlanetDetailsPage({ planet }: PlanetDetailsPagePropTypes) {
   const descriptionItems = pick(planet, [
     "name",
     "rotation_period",
