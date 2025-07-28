@@ -1,4 +1,4 @@
-import { stubPlanets, stubPlanetUtapau } from "./stubs";
+import { stubPlanets, stubPlanetUtapau, stubFilms } from "./stubs";
 
 describe("Planets overview", () => {
   before(() => {
@@ -18,11 +18,17 @@ describe("Planets overview", () => {
 
   beforeEach(() => {
     stubPlanets();
+    stubFilms();
   });
 
   it("lists all planets", () => {
     givenThePlanetOverviewPageIsLoaded();
     then60PlanetsAreDisplayed();
+  });
+
+  it("shows films that relate to a planet", () => {
+    givenThePlanetOverviewPageIsLoaded();
+    thenTheFilmsForAPlanetAreDisplayed("Hoth", "The Empire Strikes Back");
   });
 
   it("navigates to planet details page", () => {
@@ -48,7 +54,7 @@ function givenThePlanetOverviewPageIsLoaded() {
 function then60PlanetsAreDisplayed() {
   cy.contains("Star Wars Planets");
   cy.contains(60);
-  cy.get("ol").children().should("have.length", 60);
+  cy.get("ol").eq(0).children().should("have.length", 60);
 }
 
 function whenIClickPlanet(planetName: string) {
@@ -57,4 +63,15 @@ function whenIClickPlanet(planetName: string) {
 
 function thenINavigateToPlanetDetailPage(planetId: string) {
   cy.url().should("include", `/${planetId}`);
+}
+
+function thenTheFilmsForAPlanetAreDisplayed(
+  planetName: string,
+  filmName: string,
+) {
+  cy.contains(planetName)
+    .parent()
+    .within(() => {
+      cy.contains(filmName);
+    });
 }

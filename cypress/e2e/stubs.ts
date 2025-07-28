@@ -9,3 +9,13 @@ export function stubPlanetUtapau() {
     fixture: "planet-utapau.json",
   }).as("planet");
 }
+
+export function stubFilms() {
+  // the planet stubs only contians films 1 and 2
+  cy.intercept("https://swapi.info/api/films/1", {
+    fixture: "film-1.json",
+  });
+  cy.intercept("https://swapi.info/api/films/2", {
+    fixture: "film-2.json",
+  });
+}

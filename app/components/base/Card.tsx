@@ -8,8 +8,8 @@ export default function Card({
 }: PropsWithChildren<CardType>) {
   return (
     <div
-      className={`p-4
-                rounded-lg border-4 border-red-500 border-yellow-500
+      className={`p-4 h-full
+                rounded-lg border-4 border-yellow-500
                 bg-yellow-500/20
                 shadow shadow-xl
                 ${hoverable ? "hover:bg-yellow-500/50" : ""}

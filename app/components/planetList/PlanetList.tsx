@@ -10,13 +10,13 @@ export default function PlanetList({ planets }: PlanetListProps) {
   return (
     <>
       <p className="italic text-sm mb-2">
-        Which of {planets.length} planets to explore first?{" "}
+        Which of {planets.length} planets to explore first?
       </p>
-      <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-4">
         {planets.map((planet, index) => (
-          <li key={index}>
-            <Link to={`/${index + 1}`}>
-              <Card hoverable={true}>
+          <li className="h-full" key={index}>
+            <Link className="h-full block" to={`/${index + 1}`}>
+              <Card className="h-full" hoverable={true}>
                 <PlanetListItem planet={planet} />
               </Card>
             </Link>
