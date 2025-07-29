@@ -8,7 +8,9 @@ export default function PageLayout() {
                  bg-linear-to-b from-sky-950 to-purple-950
                  text-white"
     >
-      <Outlet />
+      <main id="main">
+        <Outlet />
+      </main>
     </div>
   );
 }
