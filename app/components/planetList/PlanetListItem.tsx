@@ -15,12 +15,12 @@ export default function PlanetListItem({ planet }: PlanetListItemPropTypes) {
       <h2 className="text-center text-lg">{planet.name}</h2>
       {planet.films?.length > 0 && (
         <>
-          <p className="text-sm pt-3">
+          <p id="film-list-label" className="text-sm pt-3">
             {planet.films?.length === 1
               ? "Featured in the film"
               : "Featured in the films"}
           </p>
-          <ol className="text-sm inline-flex flex-wrap gap-1">
+          <ol aria-labelledby="film-list-label" className="text-sm inline-flex flex-wrap gap-1">
             {planet.films.map((filmUrl, index) => (
               <li key={index} className="inline">
                 <Pill>

@@ -9,10 +9,10 @@ type PlanetListProps = { planets: PlanetType[] };
 export default function PlanetList({ planets }: PlanetListProps) {
   return (
     <>
-      <p className="italic text-sm mb-2">
+      <p id="planet-list-label" className="italic text-sm mb-2">
         Which of {planets.length} planets to explore first?
       </p>
-      <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-4">
+      <ol aria-labelledby="planet-list-label" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-max gap-4">
         {planets.map((planet, index) => (
           <li className="h-full" key={index}>
             <Link className="h-full block" to={`/${index + 1}`}>
